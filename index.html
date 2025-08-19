@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/avatar.css">
 
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -40,76 +41,164 @@
     <main class="l-main">
         <!--===== HOME =====-->
         <section class="home bd-grid" id="home">
-            <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Nguyen Anh Kiet</span><br>
-                    Information Technology Student</h1>
-                <p class="home__subtitle">Student ID: 23110246</p>
-                <p class="home__subtitle">Major: Information Technology</p>
-                <a href="#contact" class="button">Contact</a>
-            </div>
-
-            <div class="home__social">
-                <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                <a href="" class="home__social-icon"><i class='bx bxl-behance'></i></a>
-                <a href="" class="home__social-icon"><i class='bx bxl-github'></i></a>
-            </div>
-
-            <!-- Avatar removed as requested -->
-        </section>
-
-        <!--===== ABOUT =====-->
-        <section class="about section " id="about">
-            <h2 class="section-title">About</h2>
-            <div class="about__container bd-grid">
-                <div>
-                    <h2 class="about__subtitle">I'am Nguyen Anh Kiet</h2>
-                    <p class="about__text">Student ID: 23110246<br>Major: Information Technology<br>I am passionate
-                        about web development and always eager to learn new technologies.</p>
+            <div class="home__flex-row">
+                <div class="home__data-col">
+                    <div class="home__data">
+                        <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Nguyen Anh Kiet</span><br>
+                            Software Developer</h1>
+                        <p class="home__subtitle">23110246</p>
+                        <a href="#contact" class="button">Contact</a>
+                    </div>
+                    <div class="home__social">
+                        <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                        <a href="" class="home__social-icon"><i class='bx bxl-behance'></i></a>
+                        <a href="" class="home__social-icon"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+                <div class="home__avatar-col">
+                    <div class="home__avatar">
+                        <img src="assets/img/avatar.png" alt="Avatar" class="home__avatar-img">
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!--===== EDUCATION =====-->
+        <section class="education section" id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="about__container bd-grid">
+                <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+                    <img src="assets/img/univeristy.jpeg" alt="University Logo"
+                        style="width:90px; height:90px; border-radius:16px; box-shadow:0 2px 8px rgba(0,120,255,0.12); background:#fff;">
+                    <div>
+                        <h2 class="about__subtitle">Ho Chi Minh University of Technology and Education</h2>
+                        <p class="about__text" style="margin-bottom:0.5rem;">
+                            Major: Information Technology<br>
+                            Year: 2023 - 2027
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
+            <div class="about__container bd-grid">
+                <div>
+                    <p class="about__text">
+                        I am a passionate web developer with hands-on experience in real-world systems and
+                        infrastructure.
+                        I'm always eager to learn new technologies and explore innovative technical
+                        solutions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--===== EXPERIENCE =====-->
+        <section class="experience section" id="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience__container bd-grid">
+                <div class="experience__card">
+                    <div class="experience__logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/FPT_Software_Logo.png"
+                            alt="FPT Software Logo"
+                            style="width:60px;height:60px;border-radius:12px;background:#fff;box-shadow:0 2px 8px rgba(0,120,255,0.10);">
+                    </div>
+                    <div class="experience__details">
+                        <h3 class="experience__role">Backend Developer (Internship)</h3>
+                        <p class="experience__company">FPT Software</p>
+                        <p class="experience__time">June 2025 – August 2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!--===== SKILLS =====-->
         <section class="skills section" id="skills">
             <h2 class="section-title">Skills</h2>
 
-            <div class="skills__container bd-grid">
-                <div>
-                    <h2 class="skills__subtitle">Profesional Skills</h2>
-                    <p class="skills__text">My main skills are HTML, CSS, and JavaScript.</p>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-html5 skills__icon'></i>
-                            <span class="skills__name">HTML5</span>
-                        </div>
-                        <div class="skills__bar skills__html"></div>
-                        <div>
-                            <span class="skills__percentage">95%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-css3 skills__icon'></i>
-                            <span class="skills__name">CSS3</span>
-                        </div>
-                        <div class="skills__bar skills__css"></div>
-                        <div>
-                            <span class="skills__percentage">85%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-javascript skills__icon'></i>
-                            <span class="skills__name">JavaScript</span>
-                        </div>
-                        <div class="skills__bar skills__js"></div>
-                        <div>
-                            <span class="skills__percentage">65%</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="skills__grid">
+                <div class="skills__category">
+                    <h3 class="skills__subtitle">Frontend</h3>
+                    <ul class="skills__list">
+                        <li><i class='bx bxl-html5 skills__icon'></i> HTML5</li>
+                        <li><i class='bx bxl-css3 skills__icon'></i> CSS3</li>
+                        <li><i class='bx bxl-javascript skills__icon'></i> JavaScript</li>
+                        <li><i class='bx bxl-react skills__icon'></i> React.js</li>
 
-                <!-- Skills image removed as part of avatar/work removal -->
+                    </ul>
+                </div>
+                <div class="skills__category">
+                    <h3 class="skills__subtitle">Backend</h3>
+                    <ul class="skills__list">
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                alt="Java" class="skills__icon" style="width:1.7em;height:1.7em;vertical-align:middle;">
+                            Java</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                                alt="Spring Boot" class="skills__icon"
+                                style="width:1.7em;height:1.7em;vertical-align:middle;"> Spring Boot</li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMFbaa0Cn6L2LgeBKzziwM-nl9fqhWm1zYA&s"
+                                alt="Spring Cloud" class="skills__icon"
+                                style="width:1.7em;height:1.7em;vertical-align:middle;"> Spring Cloud</li>
+                    </ul>
+                </div>
+                <div class="skills__category">
+                    <h3 class="skills__subtitle">Database</h3>
+                    <ul class="skills__list">
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                                alt="PostgreSQL" class="skills__icon"
+                                style="width:1.7em;height:1.7em;vertical-align:middle;"> PostgreSQL</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                alt="MongoDB" class="skills__icon"
+                                style="width:1.7em;height:1.7em;vertical-align:middle;"> MongoDB</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                                alt="Redis" class="skills__icon"
+                                style="width:1.7em;height:1.7em;vertical-align:middle;"> Redis</li>
+                    </ul>
+                </div>
+                <div class="skills__category">
+                    <h3 class="skills__subtitle">Tools</h3>
+                    <ul class="skills__list">
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+                                class="skills__icon" style="width:1.7em;height:1.7em;vertical-align:middle;"> Git</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                                alt="Docker" class="skills__icon"
+                                style="width:1.7em;height:1.7em;vertical-align:middle;"> Docker</li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDRxvq75acmFPbHS8fUA72GWURt2ctFcdnAQ&s"
+                                alt="AWS" class="skills__icon" style="width:1.7em;height:1.7em;vertical-align:middle;">
+                            AWS</li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwod0EgYh6ixNJuzJAZt413WNM0SX8RrUJsg&s"
+                                alt="Grafana" class="skills__icon"
+                                style="width:1.7em;height:1.7em;vertical-align:middle;"> Grafana</li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqOKEVxLEPXLVAhlOcrfBnIOTzoCU23BwUMA&s"
+                                alt="Kafka" class="skills__icon"
+                                style="width:1.7em;height:1.7em;vertical-align:middle;"> Kafka</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--===== PROJECTS =====-->
+        <section class="projects section" id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects__container bd-grid">
+                <div class="project__card">
+                    <h3 class="project__name">ChatApp-WebSocket</h3>
+                    <p class="project__tech">Spring Boot, WebSocket, JSP, MySQL</p>
+                </div>
+                <div class="project__card">
+                    <h3 class="project__name">E-commerce (Spring Boot)</h3>
+                    <p class="project__tech">Spring MVC, JSP, MySQL</p>
+                </div>
+                <div class="project__card">
+                    <h3 class="project__name">Online Course API</h3>
+                    <p class="project__tech">Spring RESTful API, PostgreSQL</p>
+                </div>
+                <div class="project__card">
+                    <h3 class="project__name">Hematology System</h3>
+                    <p class="project__tech">Spring Cloud, Microservices, PostgreSQL, Kafka</p>
+                </div>
             </div>
         </section>
 
@@ -132,13 +221,11 @@
 
     <!--===== FOOTER =====-->
     <footer class="footer">
-        <p class="footer__title">Marlon</p>
         <div class="footer__social">
             <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
             <a href="#" class="footer__icon"><i class='bx bxl-instagram'></i></a>
             <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a>
         </div>
-        <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
     </footer>
 
 
