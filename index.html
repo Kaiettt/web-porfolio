@@ -12,6 +12,99 @@
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
     <title>Portfolio website complete</title>
+    <style>
+        /* ===== ASSIGNMENT ===== */
+        .assignment {
+            padding: 4rem 2rem;
+            background-color: #f4f6fb;
+        }
+
+        .assignment .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #0078ff;
+            /* màu xanh chủ đạo */
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .assignment .section-title::after {
+            content: '';
+            position: absolute;
+            width: 64px;
+            height: 0.18rem;
+            background-color: #0078ff;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 2rem;
+        }
+
+        .assignment__container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .assignment__card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0, 120, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .assignment__card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 120, 255, 0.2);
+        }
+
+        .assignment__title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .assignment__button {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background-color: #0078ff;
+            color: #fff;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: box-shadow 0.3s;
+        }
+
+        .assignment__button:hover {
+            box-shadow: 0 6px 20px rgba(0, 120, 255, 0.3);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media screen and (max-width: 1200px) {
+            .assignment__container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .assignment__container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .assignment__container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -25,6 +118,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#assignment" class="nav__link">Assignment</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
@@ -57,28 +151,71 @@
                 </div>
                 <div class="home__avatar-col">
                     <div class="home__avatar">
-                        <img src="assets/img/avatar.png" alt="Avatar" class="home__avatar-img">
+                        <img src="assets/img/avatarhehe.jpeg" alt="Avatar" class="home__avatar-img">
                     </div>
                 </div>
             </div>
         </section>
         <!--===== BÀI TẬP =====-->
-        <section class="assignments section" id="assignments">
+
+        <!--===== BÀI TẬP =====-->
+        <section class="assignment section" id="assignment">
             <h2 class="section-title">Bài tập</h2>
-            <div class="home__assignments">
-                <ul class="home__assignments-list">
-                    <li class="home__assignment-item"
-                        style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 1.5rem 0;">
-                        <span class="home__assignment-label" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Bài tập
-                            số 2 (Ngày 21-08-2025)</span>
-                        <a href="https://nguyenanhkiet-23110246.onrender.com/emailList" target="_blank"
-                            class="home__assignment-link"
-                            style="font-weight: bold; color: #007bff; text-decoration: underline;">Link</a>
-                    </li>
-                    <!-- Add more assignments here in the future -->
-                </ul>
+            <div class="assignment__container">
+                <div class="assignment__card">
+                    <h3 class="assignment__title">Bài tập 1</h3>
+                    <a href="https://nguyenanhkiet-23110246-bt4.onrender.com/email_list" target="_blank"
+                        class="button assignment__button">Xem bài tập</a>
+                </div>
+                <div class="assignment__card">
+                    <h3 class="assignment__title">Bài tập 2</h3>
+                    <a href="https://nguyenanhkiet-23110246-bt3.onrender.com/" target="_blank"
+                        class="button assignment__button">Xem bài tập</a>
+                </div>
+                <div class="assignment__card">
+                    <h3 class="assignment__title">Bài tập 3</h3>
+                    <a href="https://nguyenanhkiet-23110246-bt3.onrender.com/" target="_blank"
+                        class="button assignment__button">Xem bài tập</a>
+                </div>
+                <div class="assignment__card">
+                    <h3 class="assignment__title">Bài tập 4</h3>
+                    <a href="https://nguyenanhkiet-23110246-bt4.onrender.com/email_list" target="_blank"
+                        class="button assignment__button">Xem bài tập</a>
+                </div>
+                <div class="assignment__card">
+                    <h3 class="assignment__title">Bài tập 5</h3>
+                    <a href="https://two3110246-nguyenanhkiet-chap-08.onrender.com/" target="_blank"
+                        class="button assignment__button">Xem bài tập</a>
+                </div>
+                <div class="assignment__card">
+                    <h3 class="assignment__title">Bài tập 6</h3>
+                    <a href="https://two3110246-nguyenanhkiet-download-music.onrender.com/music-store/" target="_blank"
+                        class="button assignment__button">Xem bài tập</a>
+                </div>
+                <div class="assignment__card">
+                    <h3 class="assignment__title">Bài tập 7</h3>
+                    <a href="https://nguyenanhkiet-23110246-ecommerce.onrender.com/ecommerce/product/" target="_blank"
+                        class="button assignment__button">Xem bài tập</a>
+                </div>
+                <div class="assignment__card">
+                    <h3 class="assignment__title">Bài tập 8</h3>
+                    <a href="https://nguyenanhkiet-23110246-ecommerce.onrender.com/ecommerce/product" target="_blank"
+                        class="button assignment__button">Xem bài tập</a>
+                </div>
+                <div class="assignment__card">
+                    <h3 class="assignment__title">Bài tập 9</h3>
+                    <a href="https://two3110246-nguyenanhkiet-download-music.onrender.com/music-store/" target="_blank"
+                        class="button assignment__button">Xem bài tập</a>
+                </div>
+                <div class="assignment__card">
+                    <h3 class="assignment__title">Bài tập 10</h3>
+                    <a href="https://two3110246-nguyenanhkiet-12.onrender.com/sql" target="_blank"
+                        class="button assignment__button">Xem bài tập</a>
+                </div>
             </div>
         </section>
+
+
 
         <!--===== EDUCATION =====-->
         <section class="education section" id="education">
