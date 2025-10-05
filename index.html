@@ -13,96 +13,61 @@
 
     <title>Portfolio website complete</title>
     <style>
-        /* ===== ASSIGNMENT ===== */
-        .assignment {
-            padding: 4rem 2rem;
-            background-color: #f4f6fb;
-        }
-
-        .assignment .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: #0078ff;
-            /* màu xanh chủ đạo */
-            position: relative;
-            margin-bottom: 2rem;
-        }
-
-        .assignment .section-title::after {
-            content: '';
-            position: absolute;
-            width: 64px;
-            height: 0.18rem;
-            background-color: #0078ff;
-            left: 0;
-            right: 0;
-            margin: auto;
-            top: 2rem;
-        }
-
-        .assignment__container {
+        /* ===== ASSIGNMENT (GRID) ===== */
+        .assignment__grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            margin: 2rem 0;
+            margin-left: 50px;
+            margin-right: 50px;
         }
 
         .assignment__card {
             background: #fff;
+            padding: 1.2rem 1.5rem;
             border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 12px rgba(0, 120, 255, 0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
         }
 
         .assignment__card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 120, 255, 0.2);
+            transform: translateY(-6px);
+        }
+
+        .assignment__date {
+            font-weight: bold;
+            color: #4CAF50;
+            font-size: 0.95rem;
+            margin-bottom: .3rem;
         }
 
         .assignment__title {
             font-size: 1.2rem;
-            font-weight: 600;
+            margin-bottom: .5rem;
             color: #333;
+        }
+
+        .assignment__desc {
+            font-size: 0.95rem;
+            color: #555;
             margin-bottom: 1rem;
+            line-height: 1.4;
         }
 
         .assignment__button {
             display: inline-block;
-            padding: 0.5rem 1.5rem;
-            background-color: #0078ff;
+            padding: .6rem 1rem;
+            background: #4CAF50;
             color: #fff;
-            border-radius: 0.5rem;
+            border-radius: 8px;
+            font-size: .9rem;
             text-decoration: none;
-            font-weight: 600;
-            transition: box-shadow 0.3s;
+            transition: background .2s;
         }
 
         .assignment__button:hover {
-            box-shadow: 0 6px 20px rgba(0, 120, 255, 0.3);
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media screen and (max-width: 1200px) {
-            .assignment__container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .assignment__container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media screen and (max-width: 576px) {
-            .assignment__container {
-                grid-template-columns: 1fr;
-            }
+            background: #388E3C;
         }
     </style>
     <style>
@@ -802,10 +767,10 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                    <li class="nav__item"><a href="#assignments" class="nav__link">Assignments</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#assignments" class="nav__link">Assignments</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
@@ -846,62 +811,7 @@
             </div>
         </section>
 
-        <!--===== ASSIGNMENTS =====-->
-        <section class="assignment section" id="assignments">
-            <h2 class="section-title">Assignments</h2>
-            <div class="assignment__container">
-                <div class="assignment__card">
-                    <h3 class="assignment__title">Bài tập 1</h3>
-                    <a href="https://nguyenanhkiet-23110246-bt4.onrender.com/email_list" target="_blank"
-                        class="button assignment__button">Xem bài tập</a>
-                </div>
-                <div class="assignment__card">
-                    <h3 class="assignment__title">Bài tập 2</h3>
-                    <a href="https://nguyenanhkiet-23110246-bt3.onrender.com/" target="_blank"
-                        class="button assignment__button">Xem bài tập</a>
-                </div>
-                <div class="assignment__card">
-                    <h3 class="assignment__title">Bài tập 3</h3>
-                    <a href="https://nguyenanhkiet-23110246-bt3.onrender.com/" target="_blank"
-                        class="button assignment__button">Xem bài tập</a>
-                </div>
-                <div class="assignment__card">
-                    <h3 class="assignment__title">Bài tập 4</h3>
-                    <a href="https://nguyenanhkiet-23110246-bt4.onrender.com/email_list" target="_blank"
-                        class="button assignment__button">Xem bài tập</a>
-                </div>
-                <div class="assignment__card">
-                    <h3 class="assignment__title">Bài tập 5</h3>
-                    <a href="https://two3110246-nguyenanhkiet-chap-08.onrender.com/" target="_blank"
-                        class="button assignment__button">Xem bài tập</a>
-                </div>
-                <div class="assignment__card">
-                    <h3 class="assignment__title">Bài tập 6</h3>
-                    <a href="https://two3110246-nguyenanhkiet-download-music.onrender.com/music-store/" target="_blank"
-                        class="button assignment__button">Xem bài tập</a>
-                </div>
-                <div class="assignment__card">
-                    <h3 class="assignment__title">Bài tập 7</h3>
-                    <a href="https://nguyenanhkiet-23110246-ecommerce.onrender.com/ecommerce/product/" target="_blank"
-                        class="button assignment__button">Xem bài tập</a>
-                </div>
-                <div class="assignment__card">
-                    <h3 class="assignment__title">Bài tập 8</h3>
-                    <a href="https://nguyenanhkiet-23110246-ecommerce.onrender.com/ecommerce/product" target="_blank"
-                        class="button assignment__button">Xem bài tập</a>
-                </div>
-                <div class="assignment__card">
-                    <h3 class="assignment__title">Bài tập 9</h3>
-                    <a href="https://two3110246-nguyenanhkiet-download-music.onrender.com/music-store/" target="_blank"
-                        class="button assignment__button">Xem bài tập</a>
-                </div>
-                <div class="assignment__card">
-                    <h3 class="assignment__title">Bài tập 10</h3>
-                    <a href="https://two3110246-nguyenanhkiet-12.onrender.com/sql" target="_blank"
-                        class="button assignment__button">Xem bài tập</a>
-                </div>
-            </div>
-        </section>
+
 
         <!--===== ABOUT =====-->
         <section class="about section" id="about"
@@ -953,7 +863,7 @@
 
         <!--===== DEVELOPMENT LANDMARKS =====-->
         <section class="development-landmark section" id="landmark">
-            <h2 class="section-title">Development Landmarks</h2>
+            <h2 class="section-title">Development Journey</h2>
             <div class="landmark__container bd-grid">
                 <div class="landmark__card">
                     <img src="assets/img/univeristy.jpeg" alt="Entrance Logo" class="landmark__logo">
@@ -1124,6 +1034,133 @@
 
             </div>
         </section>
+
+
+        <!--===== ASSIGNMENTS =====-->
+        <!--===== ASSIGNMENTS =====-->
+        <section class="assignment section" id="assignments">
+            <h2 class="section-title">Assignments</h2>
+            <div class="assignment__grid">
+
+                <!-- BT1 -->
+                <div class="assignment__card">
+                    <div class="assignment__date">BT1</div>
+                    <h3 class="assignment__title">Tạo website cá nhân</h3>
+                    <p class="assignment__desc">Thực hành tạo website portfolio đầu tiên.</p>
+                    <a href="https://kaiettt.github.io/web-porfolio/" target="_blank" class="assignment__button">Xem bài
+                        tập</a>
+                </div>
+
+                <!-- BT2 -->
+                <div class="assignment__card">
+                    <div class="assignment__date">BT2 (21/08)</div>
+                    <h3 class="assignment__title">Introduction to Web Development</h3>
+                    <p class="assignment__desc">
+                        Tạo web project, chạy thử bằng Tomcat và deploy thực tế bằng Render.
+                    </p>
+                    <a href="https://nguyenanhkiet-23110246-bt4.onrender.com/email_list" target="_blank"
+                        class="assignment__button">Xem bài tập</a>
+                </div>
+
+                <!-- BT3 -->
+                <div class="assignment__card">
+                    <div class="assignment__date">BT3 (26/08)</div>
+                    <h3 class="assignment__title">HTML5 & CSS3</h3>
+                    <p class="assignment__desc">
+                        Tạo form survey, sử dụng HTML5 và CSS3 để thiết kế giao diện.
+                    </p>
+                    <a href="https://nguyenanhkiet-23110246-bt3.onrender.com/" target="_blank"
+                        class="assignment__button">Xem bài tập</a>
+                </div>
+
+                <!-- BT4 -->
+                <div class="assignment__card">
+                    <div class="assignment__date">BT4 (28/08)</div>
+                    <h3 class="assignment__title">Servlet</h3>
+                    <p class="assignment__desc">
+                        Hiểu cách hoạt động của servlet, xử lý submit form survey bằng servlet.
+                    </p>
+                    <a href="https://nguyenanhkiet-23110246-bt3.onrender.com/" target="_blank"
+                        class="assignment__button">Xem bài tập</a>
+                </div>
+
+                <!-- BT5 -->
+                <div class="assignment__card">
+                    <div class="assignment__date">BT5 (04/09)</div>
+                    <h3 class="assignment__title">JSP, JSTL & EL</h3>
+                    <p class="assignment__desc">
+                        Thực hiện form join email & survey với JSP, JSTL và EL.
+                    </p>
+                    <a href="https://nguyenanhkiet-23110246-bt4.onrender.com/email_list" target="_blank"
+                        class="assignment__button">Chương 6.1</a>
+                    <a href="https://nguyenanhkiet-23110246-bt3.onrender.com/" target="_blank"
+                        class="assignment__button">Chương 6.1</a>
+                </div>
+
+                <!-- BT6 -->
+                <div class="assignment__card">
+                    <div class="assignment__date">BT6 (05/09)</div>
+                    <h3 class="assignment__title">JSTL & EL (Chương 8, 9)</h3>
+                    <p class="assignment__desc">
+                        Hoàn thiện bài tập với EL và JSTL ở chương 8 & 9.
+                    </p>
+                    <a href="https://two3110246-nguyenanhkiet-chap-08.onrender.com/" target="_blank"
+                        class="assignment__button">Chương 8</a>
+                    <a href="https://two3110246-nguyenanhkiet-download-music.onrender.com/music-store/" target="_blank"
+                        class="assignment__button">Chương 9.1</a>
+                    <a href="https://nguyenanhkiet-23110246-ecommerce.onrender.com/ecommerce/product" target="_blank"
+                        class="assignment__button">Chương 9.2</a>
+                </div>
+
+                <!-- BT7 -->
+                <div class="assignment__card">
+                    <div class="assignment__date">BT7 (09/09)</div>
+                    <h3 class="assignment__title">Session & Cookies</h3>
+                    <p class="assignment__desc">
+                        Làm lại giỏ hàng, xử lý logic khi thêm và cập nhật.
+                    </p>
+                    <a href="https://nguyenanhkiet-23110246-ecommerce.onrender.com/ecommerce/product" target="_blank"
+                        class="assignment__button">Xem bài tập</a>
+                </div>
+
+                <!-- BT8 -->
+                <div class="assignment__card">
+                    <div class="assignment__date">BT8 (16/09)</div>
+                    <h3 class="assignment__title">Session & Cookies (tt)</h3>
+                    <p class="assignment__desc">
+                        Làm lại music store, xử lý session và cookies.
+                    </p>
+                    <a href="https://two3110246-nguyenanhkiet-download-music.onrender.com/music-store/" target="_blank"
+                        class="assignment__button">Xem bài tập</a>
+                </div>
+
+                <!-- BT9 -->
+                <div class="assignment__card">
+                    <div class="assignment__date">BT9</div>
+                    <h3 class="assignment__title">JDBC & CSDL</h3>
+                    <p class="assignment__desc">
+                        Kết nối CSDL bằng JDBC, form nhập query và tương tác dữ liệu qua web.
+                    </p>
+                    <a href="https://two3110246-nguyenanhkiet-12.onrender.com/sql" target="_blank"
+                        class="assignment__button">Xem bài tập</a>
+                </div>
+
+                <!-- BT10 -->
+                <div class="assignment__card">
+                    <div class="assignment__date">BT10</div>
+                    <h3 class="assignment__title">JPA & CSDL</h3>
+                    <p class="assignment__desc">
+                        Tương tác CSDL bằng JPA, xử lý join email và kiểm tra email trùng lặp.
+                    </p>
+                    <a href="https://two3110246-nguyenanhkiet-13.onrender.com/" target="_blank"
+                        class="assignment__button">Xem bài tập</a>
+                </div>
+
+            </div>
+        </section>
+
+
+
 
         <!--===== CONTACT =====-->
         <section class="contact section" id="contact">
